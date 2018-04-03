@@ -90,7 +90,7 @@ class Autocomplete extends Component {
   constructor(props) {
     super(props);
 
-    const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
+    const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => true});
     this.state = { dataSource: ds.cloneWithRows(props.data) };
     this.resultList = null;
   }
